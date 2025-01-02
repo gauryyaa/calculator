@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #e3f9ff, #e3eaf5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Calculator styling */
+.calculator {
+    background: #2d3b45;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Display area */
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    padding: 10px;
+    background-color: #1f2d3b;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+form input {
+    border: 0;
+    outline: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    background: #3a4452;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), inset 0px 3px 5px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+form input:hover {
+    background: #4b5966;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3), inset 0px 3px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Active (when clicked) Effects */
+form input:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Special styling for the equal button */
+form input.equal {
+    width: 150px;
+    background: #ff9f00;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+form input.equal:hover {
+    background: #ff7f00;
+}
+
+/* Styling for operator and AC buttons */
+form input[value="AC"],
+form input[value="DE"] {
+    background: #f25c5c;
+}
+
+form input[value="AC"]:hover,
+form input[value="DE"]:hover {
+    background: #e14b4b;
+}
+
+form input[value="."] {
+    background: #558c8c;
+}
+
+form input[value="/"],
+form input[value="*"],
+form input[value="-"],
+form input[value="+"] {
+    background: #4e89b0;
+}
+
+form input[value="."]:hover {
+    background: #66b3b3;
+}
+
+form input[value="/"]:hover,
+form input[value="*"]:hover,
+form input[value="-"]:hover,
+form input[value="+"]:hover {
+    background: #407a98;
+}
+
+/* Clear button for AC */
+form input[value="AC"] {
+    border-radius: 12px 0 0 12px;
+}
+
+form input[value="DE"] {
+    border-radius: 0 12px 12px 0;
+}
+
